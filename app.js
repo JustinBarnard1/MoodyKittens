@@ -126,7 +126,7 @@ function pet(id) {
   let petKitten = findKittenById(id)
   //console.log(petKitten)
   //for (let i = 0; i < 1; i++)
-  // TODO change back to 0.7
+
   if (Math.random() >= 0.7) {
     petKitten.mood += 1
     if (petKitten.mood >= 8) {
@@ -174,7 +174,7 @@ function catnip(id) {
  * @param {Kitten} kitten
  */
 function setKittenMood(id) {
-  // TODO still needs done
+
   let petKitten = findKittenById(id)
   //console.log(petKitten)
   let value = petKitten.mood
@@ -219,6 +219,7 @@ function setKittenMood(id) {
 }
 //}
 
+//TODO this won't save to the template.
 function classChanges(id) {
   let kTemper = findKittenById(id)
   //console.log(kTemper)
