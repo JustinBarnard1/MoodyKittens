@@ -86,7 +86,7 @@ function drawKittens() {
   allKittens.forEach(singleKitten => {
     allKittensTemplate += `
       <div id="singleDiv" class="text-light fixedContainer bg-dark">
-        <img id="${singleKitten.id}" class="kitten tolerant ${singleKitten.id}" src=${singleKitten.image} alt=${singleKitten.name}>
+        <img id="${singleKitten.id}" class="kitten ${singleKitten.id}" src=${singleKitten.image} alt=${singleKitten.name}>
         <p id="thisKitten"<p>Name: ${singleKitten.name}</p>
         <p id="ktnMood">Mood: ${singleKitten.mood}</p>
         <p id="ktnAffection">Affection: ${singleKitten.temperment}</p>
@@ -97,7 +97,7 @@ function drawKittens() {
   //debugger
   allKittenListElement.innerHTML = allKittensTemplate
   //document.getElementById(id).innerHTML
-  console.log(allKittensTemplate)
+  //console.log(allKittensTemplate)
   //let value = findKittenById()
   //classChanges(value)
 
@@ -127,7 +127,7 @@ function pet(id) {
   //console.log(petKitten)
   //for (let i = 0; i < 1; i++)
   // TODO change back to 0.7
-  if (Math.random() >= 0.2) {
+  if (Math.random() >= 0.7) {
     petKitten.mood += 1
     if (petKitten.mood >= 8) {
       petKitten.mood = 8
@@ -213,7 +213,7 @@ function setKittenMood(id) {
     //console.log("disappear")
   }
   classChanges(id)
-  debugger
+  //debugger
   //console.log(document.getElementById(petKitten.id + ""))
   //saveKittens()
 }
@@ -223,30 +223,30 @@ function classChanges(id) {
   let kTemper = findKittenById(id)
   //console.log(kTemper)
   let value = kTemper.temperment
+
   //console.log(value)
   if (value == "Tolerant") {
-    document.getElementById(kTemper.id + "").classList.remove("happy");
     document.getElementById(kTemper.id + "").classList.remove("angry");
-    //console.log(document.getElementById(petKitten.id + ""))
-    document.getElementById(kTemper.id + "").classList.add("tolerant");
-    //console.log(document.getElementById(kTemper.id + ""))
+    document.getElementById(kTemper.id + "").classList.remove("happy");
+    document.getElementById(kTemper.id + "").classList.add("kitten", "tolerant");
   }
   if (value == "Happy") {
     document.getElementById(kTemper.id + "").classList.remove("tolerant");
-    //console.log(document.getElementById(petKitten.id + ""))
     document.getElementById(kTemper.id + "").classList.remove("angry");
-    document.getElementById(kTemper.id + "").classList.add("happy");
+    document.getElementById(kTemper.id + "").classList.add("kitten", "happy");
   }
   if (value == "Angry") {
     document.getElementById(kTemper.id + "").classList.remove("tolerant");
     document.getElementById(kTemper.id + "").classList.remove("happy");
-    document.getElementById(kTemper.id + "").classList.add("angry");
+    document.getElementById(kTemper.id + "").classList.add("kitten", "angry");
   }
   if (value == "Ran Away") {
     document.getElementById(kTemper.id + "").classList.remove("tolerant");
     document.getElementById(kTemper.id + "").classList.remove("angry");
     document.getElementById(kTemper.id + "").classList.remove("happy");
-    document.getElementById(kTemper.id + "").classList.add("gone");
+    document.getElementById(kTemper.id + "").classList.add("kitten", "gone");
+    //document.getElementsById("" + "").classList.add("hidden")
+    //document.getElementsById("" + "").classList.add("hidden")
   }
   //console.log(document.getElementById(kTemper.id + ""))
 
