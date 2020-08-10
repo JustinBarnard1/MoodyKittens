@@ -128,23 +128,21 @@ button.btn-special:hover{
 }
 
 
-.kitten img{
+.kitten{
   filter: drop-shadow(2px 4px 6px #1b1b1b);
   transition: all .35s ease;
 }
-.kitten.happy img{
+.happy{
   filter: drop-shadow(2px 4px 6px #00ffb3);
 }
-.kitten.tolerant img{
+.tolerant{
   filter: drop-shadow(2px 4px 6px #646464);
 }
-.kitten.angry img{
+.angry{
   filter: drop-shadow(2px 4px 6px #ff0000) contrast(1);
 }
-.kitten.gone img{
+.gone{
   filter: drop-shadow(2px 4px 6px #ff0000) contrast(0);
-}
-.kitten.gone{
   color: var(--danger);
   pointer-events: none;
 }
@@ -193,6 +191,24 @@ button.btn-special:hover{
 }
 .d-flex.justify-content-center{
   justify-content: center;
+}
+
+.fixedContainer{
+  background-color: var(--dark);
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  height: 450px;
+  width: 250px;
+  
+  padding: .5em;
+  
+}
+
+.fBox{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .mt-1{
